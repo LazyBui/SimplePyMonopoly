@@ -81,6 +81,7 @@ class Player:
 				self._doublesTurns = 0
 			else:
 				self._pos += die1 + die2
+				self._doublesTurns += 1
 				rollAgain = True
 		elif self._jailed:
 			if self._jailedTurns == 2:
