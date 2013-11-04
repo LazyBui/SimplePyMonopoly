@@ -90,7 +90,10 @@ class Player:
 				self._pos += die1 + die2
 				self._jailedTurns = 0
 			else: self._jailedTurns += 1
-		else: self._pos += die1 + die2
+		else:
+			self._pos += die1 + die2
+			self._doublesTurns = 0
+
 		if self._pos > boardIndexSize: self._pos -= boardSize
 
 		if board[self._pos] == 'go to jail':
